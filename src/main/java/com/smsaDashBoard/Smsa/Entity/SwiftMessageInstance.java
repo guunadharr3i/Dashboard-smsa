@@ -20,11 +20,23 @@ public class SwiftMessageInstance implements Serializable{
     @JsonProperty("Message Output Reference")
     private String messageOutputReference;
 
+
+    @Column(name = "SMSA_MSG_COREF")
+  private String correspondRef;
+
     @Column(name = "SMSA_INST_NOTE")
     private String note;
 
-    @Column(name = "priority")
+    @Column(name = "SMSA_INST_PRIY")
     private String priority;
+
+
+
+    @Column(name = "NAK_CODE")
+    private String nakCode;
+
+    @Column(name = "SMSA_INST_RAW",columnDefinition = "CLOB")
+    private String rawInstance;
 
     /**
      * @return the id
@@ -83,4 +95,63 @@ public class SwiftMessageInstance implements Serializable{
     }
 
 
+    /**
+     * get field @Column(name = "NAK_CODE")
+     *
+     * @return nakCode @Column(name = "NAK_CODE")
+
+     */
+    public String getNakCode() {
+        return this.nakCode;
+    }
+
+    /**
+     * set field @Column(name = "NAK_CODE")
+     *
+     * @param nakCode @Column(name = "NAK_CODE")
+
+     */
+    public void setNakCode(String nakCode) {
+        this.nakCode = nakCode;
+    }
+
+    /**
+     * get field @Column(name = "SMSA_INST_RAW",columnDefinition = "CLOB")
+     *
+     * @return rawInstance @Column(name = "SMSA_INST_RAW",columnDefinition = "CLOB")
+
+     */
+    public String getRawInstance() {
+        return this.rawInstance;
+    }
+
+    /**
+     * set field @Column(name = "SMSA_INST_RAW",columnDefinition = "CLOB")
+     *
+     * @param rawInstance @Column(name = "SMSA_INST_RAW",columnDefinition = "CLOB")
+
+     */
+    public void setRawInstance(String rawInstance) {
+        this.rawInstance = rawInstance;
+    }
+
+    /**
+     * get field @Column(name = "SMSA_MSG_COREF")
+     *
+     * @return correspondRef @Column(name = "SMSA_MSG_COREF")
+
+     */
+    public String getCorrespondRef() {
+        return this.correspondRef;
+    }
+
+    /**
+     * set field @Column(name = "SMSA_MSG_COREF")
+     *
+     * @param correspondRef @Column(name = "SMSA_MSG_COREF")
+
+     */
+    public void setCorrespondRef(String correspondRef) {
+        this.correspondRef = correspondRef;
+    }
 }
