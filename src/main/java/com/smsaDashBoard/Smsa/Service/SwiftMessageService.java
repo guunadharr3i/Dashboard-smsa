@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 
 public interface SwiftMessageService {
-//    SwiftRequestPojo getSwiftMessageByTxnRef(String txnRef);
 
     public List<SwiftMessageHeader> getFilteredMessages(SwiftRequestPojo filters);
 
